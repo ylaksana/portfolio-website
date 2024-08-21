@@ -1,0 +1,490 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+@import url("https://use.typekit.net/etw7xge.css");
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Roboto+Condensed:wght@300&family=Roboto:wght@300&display=swap');
+
+/* Animations */
+
+/* Fade in for sections */
+.technologies-fade-in,
+.projects-fade-in,
+.experience-fade-in{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.experience-fade-in.visible{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.projects-fade-in.visible{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.technologies-fade-in.visible{
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.contact-fade-in{
+    opacity:0;
+    width:45px;
+    padding:10px;
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.contact-fade-in.visible{
+    opacity: 1;
+    transform: scale(2);
+}
+
+.hand.visible{
+    animation: rotateBackAndForth 0.4s ease-in-out;
+    animation-delay: 0.8s;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes rotateBackAndForth {
+    0% {
+        transform: rotate(0deg); /* Starting position */
+    }
+    50% {
+        transform: rotate(-30deg); /* Rotate to 180 degrees */
+    }
+    100% {
+        transform: rotate(0deg); /* Rotate back to 0 degrees */
+    }
+}
+
+/* All text */
+*{
+    font-family:"Oswald";
+    justify-content: space-between;
+    color: #3ab49a;
+    text-align: center;
+
+}
+
+header{
+    position: fixed; /* Fixes the topbar at the top of the viewport */
+    top: 0;
+    left: 0;
+    width: 100%; /* Ensures the topbar spans the full width of the screen */
+    background-color: rgb(30, 40, 50); /* Background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a shadow for a slight 3D effect */
+}
+
+html,body{
+    background-color:rgb(11, 25, 37);
+    margin:0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+    transition: all 1s ease-in-out;
+}
+
+/* Buttons */
+button{
+    padding: 0px 20px;
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight:bold;
+    color: #098d9e;
+    background-color: rgb(11, 25, 37);
+    border-color: rgb(24, 92, 92);
+    border: 5px solid #098d9e;
+    border-radius: 11px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover{
+    background-color: #223f53;
+}
+
+
+/* Navigation */
+.main_header{
+    z-index: 2;
+    padding: 10px 20px; /* Padding inside the header */
+}
+
+.main_header nav{
+    display: flex;
+    justify-content: space-between; /* Space items apart */
+    align-items: center; /* Vertically center items */
+}
+
+
+
+.links {
+    display: flex;
+    gap: 20px; /* Space between icons */
+}
+
+.nav{
+    display:flex;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.nav-list {
+    display: flex;
+    list-style-type: none;
+    gap: 20px; /* Space between nav items */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-list li:hover{
+    background-color: #1f6479;
+    height:100%
+}
+
+.nav li a {
+    color: #3ab49a;;
+    text-decoration: none;
+    font-size: 20px;
+    padding:0 10px;
+    transition: color 0.3s ease, background-color 0.3s ease; /* Apply transition */
+}
+
+.icon-link {
+    transition: background-color 0.3s ease; /* Smooth transition */
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.icon-link:hover {
+    background-color: #098d9e;
+}
+
+/* Title */
+.title{
+    background-image: url(../img/483443.jpg);
+    background-color: #23272c;
+    background-blend-mode:multiply;
+    background-position: 0% -15%;
+    background-size: cover; /* Ensures the image covers the entire area */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    padding:50px 0;
+}
+
+.introduction .subtitle{
+    margin: 0; /* Removes the default margin */
+
+}
+
+.title .name{
+    font-size: 70px;
+    font-weight: bold;
+    margin: 200px; /* Removes the default margin */
+    animation: fadeIn 1.5s ease forwards;
+    text-align: center;
+    animation-delay: 0.1s;
+}
+
+.title p{
+    font-size: 30px;
+}
+
+.titles{
+    display: flex;
+    justify-content: space-between;
+    margin:100px;
+}
+
+.title-text{
+    flex: 1;
+    opacity: 0;
+    animation: fadeIn 1.5s ease forwards;
+}
+
+.title-text:nth-child(1) {
+    animation-delay: 0.7s;
+}
+
+.title-text:nth-child(2) {
+    animation-delay: 0.8s;
+}
+
+.title-text:nth-child(3) {
+    animation-delay: 0.9s;
+}
+
+
+.title-icon p{
+    text-align: center;
+    margin: 10px; /* Add space around each container */
+}
+
+.titles img{
+    padding:10px;
+    width:100px;
+    background-color: #098d9e;
+    border-radius: 70px;
+    padding: 20px;
+    justify-items: auto;
+}
+ 
+/*About me*/
+
+#experience h2{
+    margin-top: 70px;
+    font-size: 35px;
+    padding-top: 150px; /* Space to move the element down */
+    margin-top: -80px; /* Pull the element back up */
+   
+}
+
+.introduction p{
+    font-size: 25px;
+    padding: 15px 500px;
+}
+
+/* What I do */
+/* Write me! */
+
+/* Projects */
+#projects{
+    background-color: rgb(11, 19, 37);
+    padding:50px
+}
+
+#projects h2{
+    font-size: 30px;
+    padding: 20px;;
+}
+
+#projects h3{
+    font-size: 25px;
+}
+
+#projects p{
+    font-size: 23px;
+    padding: 0 500px;
+    padding-bottom:70px;
+}
+
+/* Technologies */
+
+#technologies{
+    text-align: center;
+    justify-items: center;
+    padding: 50px 10px; /* Add some padding around the section */
+    background-color: #0a0f24;
+}
+
+#technologies p {
+    font-size: 25px;
+    margin-bottom: 40px;
+}
+
+#technologies h2{
+    font-size: 30px;
+    margin-bottom: 10px; /* Space between the title and the grid */
+}
+
+.icons{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr)); /* 3 equal columns */
+    gap: 20px; /* Space between icons */
+    justify-items: center; /* Center the grid in its container */
+    max-width: 320px; /* Restrict the grid width */
+    margin: 0 auto; /* Center the grid within its container */
+}
+
+
+
+
+.icons img{
+    width: 60px;
+    background-color: #098d9e;
+    border-radius: 10px;
+    padding:10px;
+    margin:7px;
+    align-items: center;
+    justify-content: center;
+
+}
+
+/* Contact */
+#contact{
+    background-color: rgb(10, 15, 30);
+    align-items: center;
+    display: flexbox;
+    justify-items: center;
+}
+
+#contact h3{
+    font-size: 30px;
+    margin:0;
+    padding-top: 50px;
+    
+}
+
+#contact p{
+    margin:10px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+#contact img{
+    width:150px;
+    margin:50px
+}
+
+#contact button{
+    margin-right: 19px;
+    margin-bottom: 50px;
+    width: 150px;
+    height:60px;
+    font-size: 20px;
+}
+
+.hand{
+     z-index: 1;
+    position: absolute;
+    transition: transform 1s ease-out;
+}
+
+
+/* Card Display */
+
+.overlay {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay-content{
+    background-color: rgb(30, 40, 50);
+    border-radius: 10px;
+    max-width: 1000px; /* Maximum width for the card */
+    text-align: center;
+    position: relative;
+}
+
+.overlay img{
+    width:250px;
+    border-radius: 20px;
+    padding-top:10px;
+}
+
+.overlay p{
+    padding: 0 100px;
+    padding-bottom: 20px;
+}
+
+.img-container{
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center images horizontally */
+    align-items: center; /* Center images vertically if they have different heights */
+}
+
+.link-container a{
+    padding: 10px 20px;
+    margin:30px;
+    font-size: 25px;
+    color: white;
+    background-color: #0078D4; /* Button color */
+    border: 10px;
+    border: #0a0f24;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    text-align: center;
+}
+
+.close-btn{
+    position:absolute;
+    top: 10px; /* Adjust this value to move it up or down */
+    right: 10px; /* Move the button closer to the right edge */
+    font-size: 40px;
+    text-align: center;
+    font-weight: bold;
+    color: #098d9e;
+    background-color: rgb(11, 25, 37); /* Blue background */
+    border-color: rgb(24, 92, 92);
+    border: 4px solid #098d9e;
+    border-radius: 10px;
+    cursor: pointer;
+    margin: 10px;
+    padding: 0 6px; /* Remove padding */
+    line-height: 0.7; /* Adjust line-height to remove extra space */
+}
+
+/* Project Container */
+
+.project-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Space between project images */
+    margin-top: 50px;
+    
+}
+
+.project {
+    position: relative;
+    width: 400px; /* Set the width of the square */
+    height: 200px; /* Set the height equal to the width to make it square */
+    margin: 0 20px;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image covers the entire square */
+    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Start with overlay hidden */
+    transition: opacity 0.3s ease; /* Smooth transition for overlay */
+}
+
+.project:hover .project-image {
+    filter: brightness(50%); /* Darkens the image on hover */
+}
+
+.project:hover .project-overlay {
+    opacity: 1; /* Show overlay on hover */
+}
+
+.project-name {
+    font-size: 20px;
+    text-align: center;
+}

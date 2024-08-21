@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="css/styles.css"/>
+    <body>
+        <header id="home" class="main_header">
+            <nav>
+                <div class="links">
+                    <div class="icon-link" data-hover-color="#FF5733">
+                        <a href="https://github.com/ylaksana"><img src="img/icons8-github-64.png" width="40" alt="GitHub"></a>
+                    </div>
+                    <div class="icon-link" data-hover-color="#FF5733">
+                        <a href="https://www.linkedin.com/in/yohanneslaksana/"><img src="img/icons8-linkedin-50.png" width="40" alt="LinkedIn"></a>
+                    </div>
+                    <div class="icon-link" data-hover-color="#FF5733">
+                        <a href="https://www.artstation.com/yohoyoro"><img src="img/icons8-artstation-50.png" width="40" alt="ArtStation"></a>
+                    </div>
+                    
+                </div>
+                <div class="nav">
+                    <ul class="nav-list">
+                        <li><a href="#experience">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <button id="resume">Resume</button>
+                </div>
+            </nav>
+        </header>
+        
+
+            <!--ABOUT ME-->
+            <!--Short introduction about myself and my background-->
+            
+        <section class="title">
+            <div>
+                <p class="name">Hey, my name is Yohannes Laksana</p>
+                
+                <!-- <p>
+                    I'm also a 3D artist and spend my free time making 3D models and prints based
+                    on video games that I've played.
+                </p> -->
+            </div>
+            <div class="titles">
+                <div class="title-text">
+                    <img src="img/icons8-code-60.png" alt="backend">
+                    <p>Backend Software Engineer</p>
+                </div>
+                <div class="title-text">
+                    <img src="img/icons8-mobile-phone-60.png" alt="mobile">
+                    <p>Android Developer</p>
+                </div>
+                <div class="title-text">
+                    <img src="img/icons8-palette-64.png" alt="artist">
+                    <p>3D Artist</p>
+                </div>
+            </div>
+        </section>
+
+        <!--EXPERIENCE-->
+        <!--What have I been doing for the past year and my experience with languages-->
+        <section id="experience">
+            <h2>ABOUT ME</h2 id="experience">
+            <div class="experience-fade-in">
+                <div class="introduction">
+                    <p>I'm a backend software engineer that specializes in building and managing apps and databases. Currently, I'm completing a Masters in Computer Science at the University of Texas at Austin
+                        and learning skills such as android mobile development, machine learning, and LLM training. I transitioned into software development in 2022 and have progressively built on my
+                        programming skills by creating personal projects to grow as a developer. 
+                        So far, I've built several projects such as a social app, discord bots and deep learning models. Right now, I'm looking for opportunities
+                        in the industry where I can grow my skills and connect with other developers. 
+                    </p>
+                    <p>Outside of programming, my hobbies are 3D modeling, prop making, and petting my cat.</p>
+                </div>
+            </div>
+        </section>
+        <br>
+
+        <!--PROJECTS-->
+        <!--My strongest projects that showcase my skills-->
+
+        <section id="projects">
+            <h2>PROJECTS</h2>
+            <div class="projects-fade-in">
+                <!--Project grid-->
+                <div class="project-container">
+                    <div class="project" onclick="showOverlay('swipeMeet')">
+                        <img src="img/studio64_c8CB7djgtO.gif" alt="SwipeMeet" class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-name">SwipeMeet</div>
+                        </div>
+                    </div>
+    
+                    <div class="project" onclick="showOverlay('stateBased')">
+                        <img src="img/ezgif-1-df342b474a.gif" alt="Deep Learning Agent" class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-name">Deep Learning Hockey Player</div>
+                        </div>
+                    </div>
+                    <div class="project" onclick="showOverlay('pokeCaller')">
+                        <img src="img/Code_QYkrI37Qoh.gif" alt="PokeCaller" class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-name">PokeCaller</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!--Technologies-->
+
+        <section id="technologies">
+            <h2>TECHNOLOGIES</h2>
+            <div class="technologies-fade-in">
+                <p>These are the technologies I've worked with</p>
+                <div class="icons">
+                    <img src="img/icons8-python-50.png" alt="Python">
+                    <img src="img/icons8-c-50.png" alt="C++">
+                    <img src="img/icons8-kotlin-50.png" alt="Kotlin">
+                    <img src="img/icons8-javascript-50.png" alt="JavaScript">
+                    <img src="img/icons8-html-50.png" alt="HTML">
+                    <img src="img/icons8-css-50.png" alt="CSS">
+                    <img src="img/icons8-postgresql-50.png" alt="PostGreSQL">
+                    <img src="img/icons8-discord-50.png" alt="Discord">
+                    <img src="img/icons8-android-50.png" alt="Android">
+                </div>
+            </div>
+        </section>
+
+        <!--CONTACT-->
+        <!--Contact information such as my email and my phone number-->
+
+        <section id="contact" >
+                <div>
+                    <h3>SAY HELLO!</h3>
+                <p>Let me know if you're interested in working on a project or just want to get in touch, shoot me a message!</p>
+                <img src="img/hand-wave-outline.png" alt="hand-wave" class="hand">
+                <img src="img/pngwing.com.png" alt="glow" class="contact-fade-in">
+                <br>
+                <button>Connect</button>
+                </div>
+            
+            
+        </section>
+
+        <!-- Card for project display -->
+
+        <div id="overlay" class="overlay">
+            <div class="overlay-content">
+                <button class="close-btn" onclick="closeOverlay()">&times;</button>
+                <div class="img-container">
+                    <img id="img1">
+                    <img id="img2">
+                    <img id="img3">
+                </div>
+                <h2 id="project-title">Project Title</h2>
+                <p id="project-description">Project description</p>
+                <div class="link-container">
+                    <a href="" alt="Source">Source</a>
+                    <a href="" alt="Demo">Demo</a>
+                </div>
+            </div>
+        </div>
+
+        <script src="../js/script.js"></script>
+    </body>
+</html>
