@@ -1,18 +1,29 @@
 
 // Project Containers
 
+document.getElementById('demo').addEventListener("click", function(event){
+    if(!this.href || this.href === window.location.href + '#'){
+        event.preventDefault();
+    }
+});
+
 function showOverlay(projectId){
     const overlay = document.getElementById('overlay');
     const title = document.getElementById('project-title');
+    const link = document.getElementById('link');
+    const demo = document.getElementById('demo');
     const description = document.getElementById('project-description');
     const image_1 = document.getElementById('img1');
     const image_2 = document.getElementById('img2');
     const image_3 = document.getElementById('img3');
+    
 
     if(projectId === 'pokeCaller'){
-        image_2.src = 'img/Code_QYkrI37Qoh.gif';
+        image_2.src = '../img/Code_QYkrI37Qoh.gif';
         image_2.style.width = "500px";
         title.innerText = 'PokeCaller';
+        link.setAttribute("href", "https://github.com/ylaksana/pokemonCaller");
+        demo.style.backgroundColor = "#949494";
         description.textContent = 'Inspired to create a discord bot for fun, I thought of an idea to create a Pokemon dictionary through an existing API and a database. \
         This discord bot was able to make API calls to receive data entries on Pokemon and display them in a Discord server. \
         Members of a server could also use a database that is linked to the bot to create a Pokemon favorites list.';
@@ -21,6 +32,8 @@ function showOverlay(projectId){
         title.innerText = 'Deep Learning Hockey Agent';
         image_2.src = 'img/ezgif-1-df342b474a.gif';
         image_2.style.width = "500px";
+        link.setAttribute("href", "https://github.com/ylaksana/Deep-Learning-Projects/tree/main/State%20Based%20Project");
+        demo.style.backgroundColor = "#949494";
         description.innerText = 'This is an agent that was made through solely focusing on change in states or "state-based learning".\
         With a group of developers, we designed and programmed the state-based training process so that the agent can win hockey games against other trained agents.\
         We generated trial runs of dummy agents to capture their behavior and processed the trial data into states that could be used as training data for the agents.\
@@ -32,6 +45,9 @@ function showOverlay(projectId){
         image_2.src = 'img/studio64_c8CB7djgtO.gif';
         image_3.src = 'img/studio64_ZX3Vnu89za.gif';
         title.innerText = 'SwipeMeet (Social Event Planner App)';
+        link.setAttribute("href", "https://github.com/ylaksana/SwipeMeet");
+        demo.setAttribute("href", "https://www.youtube.com/watch?v=z6vibdirZlc");
+        demo.style.backgroundColor = "#0078D4";
         description.innerText = 'This is an android app that I developed in Android Studio using Kotlin. \
         The purpose of the app was to connect people who had similar interests through event planning. \
         There were several APIs that made the app experience more convenient such as OpenStreetMaps and FireBase. \
@@ -48,6 +64,7 @@ function closeOverlay(){
     const image_1 = document.getElementById('img1');
     const image_2 = document.getElementById('img2');
     const image_3 = document.getElementById('img3');
+    demo.setAttribute("href", "")
     image_2.style.width = "250px";
     image_1.src  = "", image_2.src  ="", image_3.src ="";
 }

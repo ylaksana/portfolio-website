@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <link rel="stylesheet" href="css/styles.css"/>
+<link rel="icon" href="img/YL.png" type ="image/png">
     <body>
         <header id="home" class="main_header">
             <nav>
@@ -22,7 +23,7 @@
                         <li><a href="#projects">Projects</a></li>
                         <li><a href="#contact">Contact</a></li>
                     </ul>
-                    <button id="resume">Resume</button>
+                    <button id="resume" onclick="window.open('YohannesLaksana_Resume.pdf', '_blank')">Resume</button>
                 </div>
             </nav>
         </header>
@@ -137,7 +138,7 @@
                 <img src="img/hand-wave-outline.png" alt="hand-wave" class="hand">
                 <img src="img/pngwing.com.png" alt="glow" class="contact-fade-in">
                 <br>
-                <button>Connect</button>
+                <button onclick="window.location.href='mailto:laksanayohannes@gmail.com?subject=Subject%20Here&body=Hello%20there!'">Connect</button>
                 </div>
             
             
@@ -156,8 +157,8 @@
                 <h2 id="project-title">Project Title</h2>
                 <p id="project-description">Project description</p>
                 <div class="link-container">
-                    <a href="" alt="Source">Source</a>
-                    <a href="" alt="Demo">Demo</a>
+                    <a href="" alt="Source" id="link">Source</a>
+                    <a href="" alt="Demo" id="demo">Demo</a>
                 </div>
             </div>
         </div>
@@ -165,3 +166,4 @@
         <script src="../js/script.js"></script>
     </body>
 </html>
+

@@ -374,6 +374,7 @@ button:hover{
     background-color: rgba(0, 0, 0, 0.8);
     justify-content: center;
     align-items: center;
+    z-index: 2
 }
 
 .overlay-content{
@@ -406,7 +407,7 @@ button:hover{
     margin:30px;
     font-size: 25px;
     color: white;
-    background-color: #0078D4; /* Button color */
+    background-color: #0078D4;
     border: 10px;
     border: #0a0f24;
     border-radius: 5px;
